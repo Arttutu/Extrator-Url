@@ -71,13 +71,9 @@ class ExtratorUrl:
         return self.url == other.url
 
 
-# extrator_url = extrator_url("'bytebank.com/cambio?moedaDestino=dolar&moedaOrigem=real&quantidade=100")
 url = "https://alura.com.br/cambio?moedaDestino=Dolar&MoedaOrigem=real&quantidade=5"
 extrator_url = ExtratorUrl(url)
 quantidade = extrator_url.get_busca_parametro("quantidade")
 print(f"valor em real é ${quantidade}")
 valor_convertido = extrator_url.get_converte(quantidade)
 print(f"valor em dolar é {round(valor_convertido,2)}$" )
-# extrator_url2 = ExtratorUrl(url)
-# print(extrator_url)
-# print(extrator_url == extrator_url2)
